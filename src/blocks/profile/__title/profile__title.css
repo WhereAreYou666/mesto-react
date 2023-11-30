@@ -1,0 +1,13 @@
+.profile__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: last baseline;
+  margin-top: 22.25px;
+}
+
+@media screen and (min-width: 880px) {
+  .profile__title {
+    margin-top: 0;
+  }
+}

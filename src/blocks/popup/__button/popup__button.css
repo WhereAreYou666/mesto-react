@@ -1,0 +1,35 @@
+.popup__button {
+  margin-top: 45px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  width: 100%;
+  min-width: 238px;
+  min-height: 46px;
+  background-color: #000;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  border: 0;
+  border-radius: 2px;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 880px) {
+  .popup__button {
+    min-width: 358px;
+    min-height: 50px;
+    margin-top: 18px;
+    margin-bottom: 37px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.popup__button:hover {
+  opacity: .8;
+}

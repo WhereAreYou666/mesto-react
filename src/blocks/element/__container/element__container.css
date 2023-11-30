@@ -1,0 +1,11 @@
+.element__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 246px;
+  margin-top: 25px;
+  margin-left: 21px;
+  margin-right: 20px;
+  margin-bottom: 31px;
+  padding: 0;
+}

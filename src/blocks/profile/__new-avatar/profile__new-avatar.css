@@ -1,0 +1,30 @@
+.profile__new-avatar {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.80);
+  background-image: url(../../../images/avatar-button.svg);
+  background-size: 26px 26px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .25s;
+}
+
+.profile__new-avatar:hover {
+  opacity: 1;
+}
+
+@media (max-width: 880px) {
+  .profile__new-avatar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+} 
