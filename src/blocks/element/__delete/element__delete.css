@@ -1,4 +1,4 @@
-.element__delite {
+.element__delete {
   border: 0;
   margin: 0;
   padding: 0;
@@ -16,6 +16,6 @@
   align-self: center;
 }
 
-.element__delite:hover {
+.element__delete:hover {
  opacity: .6;
 }

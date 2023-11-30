@@ -16,9 +16,9 @@ export default function Card({ card, onCardClick }) {
         </div>
       </div>
       <button
-        className="element__delite" 
+        className="element__delete" 
         type="button" 
-        aria-label="удалить"
+        aria-label="delete"
       />
     </>
   )
