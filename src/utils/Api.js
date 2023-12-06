@@ -33,8 +33,8 @@ export class Api {
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
-        name: data.username,
-        about: data.userinfo,
+        name: data.name,
+        about: data.about,
       }),
     })
       .then(this._onResponse)
@@ -53,19 +53,16 @@ export class Api {
 
   addNewCardPlace(data) {
     return fetch(`${this._url}/cards`, {
-      method: 'POST',
+      method: "POST",
       headers: this._headers,
-      body: JSON.stringify({
-        name: data.placename,
-        link: data.placelink
-      })
+      body: JSON.stringify(data),
     })
       .then(this._onResponse)
-  };
+  }
 
-  changeLike(cardId, isLiked) {
+  changeLikeCardStatus(cardId, isLiked) {
     return fetch(`${this._url}/cards/${cardId}/likes`, {
-      method: isLiked ? 'DELETE' : 'PUT',
+      method: isLiked ? 'PUT' : 'DELETE',
       headers: this._headers
     })
       .then(this._onResponse)
