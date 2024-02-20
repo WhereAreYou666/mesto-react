@@ -2,11 +2,11 @@ export class Api {
   constructor(config) {
     this._url = config.urlCohort;
     this._headers = config.headers;
-  };
+  }
 
   _onResponse(res) {
     return res.ok ? res.json() : res.json().then(err => Promise.reject(err))
-  };
+  }
 
   getAllInfo() {
     return Promise.all([this.getProfileInfo(), this.getCards()])
@@ -18,7 +18,7 @@ export class Api {
       headers: this._headers
     })
       .then(this._onResponse)
-  };
+  }
 
   getCards() {
     return fetch(`${this._url}/cards`, {
@@ -26,7 +26,7 @@ export class Api {
       headers: this._headers
     })
       .then(this._onResponse)
-  };
+  }
 
   editUserInfo(data) {
     return fetch(`${this._url}/users/me`, {
@@ -38,7 +38,7 @@ export class Api {
       }),
     })
       .then(this._onResponse)
-  };
+  }
 
   editUserAvatar(data) {
     return fetch(`${this._url}/users/me/avatar`, {
@@ -49,7 +49,7 @@ export class Api {
       })
     })
       .then(this._onResponse)
-  };
+  }
 
   addNewCardPlace(data) {
     return fetch(`${this._url}/cards`, {
@@ -66,7 +66,7 @@ export class Api {
       headers: this._headers
     })
       .then(this._onResponse)
-  };
+  }
 
   removeCard(cardId) {
     return fetch(`${this._url}/cards/${cardId}`, {
@@ -74,8 +74,8 @@ export class Api {
       headers: this._headers
     })
       .then(this._onResponse)
-  };
-};
+  }
+}
 
 const api = new Api({
   urlCohort: 'https://mesto.nomoreparties.co/v1/cohort-77',
